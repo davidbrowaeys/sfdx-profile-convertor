@@ -1,0 +1,27 @@
+{
+  "name": "dbx-cli",
+  "version": "1.0.0",
+  "description": "Profile converter",
+  "main": "index.js",
+  "author": "David Browaeys",
+  "repository": "https://github.com/davidbrowaeys/profile-convertor",
+  "bugs": {
+    "url": "https://github.com/davidbrowaeys/profile-convertor/issues"
+  },
+  "scripts": {
+    "test": "node_modules/.bin/mocha",
+    "release": "np"
+  },
+  "keywords": [
+    "force.com",
+    "salesforce",
+    "salesforce-dx",
+    "salesforcedx"
+  ],
+  "dependencies": {
+    "salesforce-alm": "^40.0.6",
+    "js2xmlparser": "^3.0.0",
+    "xml2js": "^0.4.19"
+  },
+  "devDependencies": {}
+}
