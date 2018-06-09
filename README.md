@@ -1,5 +1,7 @@
 # Profile convertor for SFDX
 
+<img src="profile folder example.png"/>
+
 Convert
 ```shell
 Usage: sfdx dbx:profile:convert 
