@@ -1,5 +1,5 @@
 {
-  "name": "dbx-cli",
+  "name": "profile-convertor",
   "version": "1.0.0",
   "description": "Profile converter",
   "main": "index.js",

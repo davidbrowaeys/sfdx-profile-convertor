@@ -151,18 +151,18 @@ function convertProfile(profilename, dirpath){
     module.exports = {
         topic: 'profile',
         command: 'convert',
-        description: 'Create custom label',
+        description: 'Convert profile.meta-xml into json files grouped by category',
         help: 'help text for dbx:profile:convert',
         flags: [{
             name: 'profilename',
             char: 'p',
-            description: 'convert specified profile, if not use, convert all profiles',
+            description: 'Convert specified profile. If not used, will convert all profiles into profile folders',
             hasValue: true,
             required: false
         },{
             name: 'resourcepath',
             char: 'r',
-            description: 'resource directory path to store files, default to force-app/main/default',
+            description: 'profile resource directory path, default to ./force-app/main/default/profiles',
             hasValue: true,
             required: false
         }],

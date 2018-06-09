@@ -4,6 +4,7 @@ const js2xmlparser = require('js2xmlparser');
 function buildProfile(profilename, dirpath){
     console.log(profilename);
     var profilepath = `${dirpath}/${profilename}`;
+    console.log(`*     ${profilepath}`);
     //profile
     var profilesetting = JSON.parse(fs.readFileSync(profilepath+'/'+profilename+'.json').toString());
 
@@ -90,18 +91,18 @@ function buildProfile(profilename, dirpath){
     module.exports = {
         topic: 'profile',
         command: 'build',
-        description: 'Build profile into xml',
+        description: 'Reconstruct profile.meta-xml from all json files. ',
         help: 'help text for dbx:profile:build',
         flags: [{
             name: 'profilename',
             char: 'p',
-            description: 'convert specified profile',
+            description: 'Rebuild specified profile into meta-xml. If not used, will rebuild all profiles into profile folders',
             hasValue: true,
             required: false
         },{
             name: 'resourcepath',
             char: 'r',
-            description: 'resource directory path to store files, default to force-app/main/default',
+            description: 'Profile resource directory path, default to ./force-app/main/default/profiles',
             hasValue: true,
             required: false
         }],
@@ -114,6 +115,7 @@ function buildProfile(profilename, dirpath){
                 resourcepath = './force-app/main/default/profiles';
             }
 
+            console.log('Now converting : ');
             if (profilename){
                 buildProfile(profilename, resourcepath);    
             }else{
@@ -124,7 +126,6 @@ function buildProfile(profilename, dirpath){
                     }
                 });
             }
-            console.log('Profile(s) build successfully!');
         }
     };
 }());

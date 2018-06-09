@@ -7,7 +7,7 @@
   }];
 
   exports.namespace = {
-    name: 'dbx',
+    name: 'dbx2',
     description: 'Various utlity commands for SFDX'
   };
 
