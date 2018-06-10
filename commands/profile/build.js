@@ -80,8 +80,8 @@ function buildProfile(profilename, dirpath){
             profile.userPermissions.push(JSON.parse(fs.readFileSync(profilepath+'/userPermissions/'+file).toString()));
         });
     }
-    var xml = js2xmlparser.parse("Profile",profile);
-    fs.writeFileSync(`${dirpath}/${profilename}+'.profile-meta.xml`, xml);
+    var xml = js2xmlparser.parse("Profile", profile, { declaration: { encoding: 'UTF-8' }});
+    fs.writeFileSync(`${dirpath}/${profilename}.profile-meta.xml`, xml);
 }
 
 (function() {
